@@ -168,7 +168,7 @@ class LivenessDetectionActivity : BaseCameraActivity(), LivenessDetectionListene
     override fun onStartDetection(detectionMode: DetectionMode) {
         if(currentDetection != detectionMode) {
             currentDetection = detectionMode
-            restartTime()
+           // restartTime()
         }
         when(detectionMode){
             DetectionMode.HOLD_STILL ->{
@@ -176,18 +176,18 @@ class LivenessDetectionActivity : BaseCameraActivity(), LivenessDetectionListene
                 speak(getString(R.string.lbl_hold_still_instruction))
             }
 
-            DetectionMode.BLINK -> {
+            /*DetectionMode.BLINK -> {
                 tvInstruction.text = getString(R.string.liveness_please_blink)
                 speak(getString(R.string.liveness_please_blink))
-            }
+            }*/
             DetectionMode.OPEN_MOUTH -> {
                 tvInstruction.text = getString(R.string.liveness_please_open_mouth)
                 speak(getString(R.string.liveness_please_open_mouth))
             }
-            DetectionMode.SHAKE_HEAD -> {
+            /*DetectionMode.SHAKE_HEAD -> {
                 tvInstruction.text = getString(R.string.liveness_please_shake_head)
                 speak(getString(R.string.liveness_please_shake_head))
-            }
+            }*/
             DetectionMode.SMILE -> {
                 tvInstruction.text = getString(R.string.liveness_please_smile)
                 speak(getString(R.string.liveness_please_smile))
@@ -209,6 +209,6 @@ class LivenessDetectionActivity : BaseCameraActivity(), LivenessDetectionListene
 
     companion object {
         private const val TAG = "Liveness Detection"
-        private const val COUNTDOWN_TIME = 20
+        private const val COUNTDOWN_TIME = 10
     }
 }

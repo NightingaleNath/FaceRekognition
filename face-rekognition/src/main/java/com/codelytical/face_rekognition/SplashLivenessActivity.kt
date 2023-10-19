@@ -18,7 +18,7 @@ class SplashLivenessActivity : AppCompatActivity() {
                     addFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT)
                 })
                 finish()
-            },2000)
+            },1000)
         else {
             val result = LivenessResult(false,"Camera Permission Denied")
             setResult(RESULT_OK,Intent().putExtra(EXTRA_RESULT,result))

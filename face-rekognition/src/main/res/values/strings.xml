@@ -9,4 +9,6 @@
     <string name="lbl_put_face_to_the_frame">Please move your face to the centre of the face frame</string>
     <string name="lbl_too_far">Too Far</string>
     <string name="lbl_too_close">Too Close</string>
+    <string name="face_nrekognition">Face \nRekognition</string>
+    <string name="developed">Developed by CodeLytical</string>
 </resources>

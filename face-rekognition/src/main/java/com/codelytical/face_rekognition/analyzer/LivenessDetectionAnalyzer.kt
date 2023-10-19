@@ -76,9 +76,9 @@ class LivenessDetectionAnalyzer(
         val inputImage = InputImage.fromMediaImage(image.image!!,
             rotationDegrees)
         when (currentDetectionMode()) {
-            DetectionMode.BLINK,
+            /*DetectionMode.BLINK,*/
             DetectionMode.SMILE,
-            DetectionMode.SHAKE_HEAD,
+            /*DetectionMode.SHAKE_HEAD,*/
             DetectionMode.HOLD_STILL -> {
                 classificationDetector.process(inputImage)
                     .addOnSuccessListener { faces ->
@@ -124,8 +124,8 @@ class LivenessDetectionAnalyzer(
 
     private fun detectGesture(face: Face, detectionMode: DetectionMode) {
         when (detectionMode) {
-            DetectionMode.BLINK -> detectBlink(face)
-            DetectionMode.SHAKE_HEAD -> detectShakeHead(face)
+            /*DetectionMode.BLINK -> detectBlink(face)*/
+            /*DetectionMode.SHAKE_HEAD -> detectShakeHead(face)*/
             DetectionMode.OPEN_MOUTH -> detectMouthOpen(face)
             DetectionMode.SMILE -> detectSmile(face)
             DetectionMode.HOLD_STILL -> detectHoldStill(face)
@@ -260,7 +260,7 @@ class LivenessDetectionAnalyzer(
 }
 
 enum class DetectionMode {
-    BLINK, SHAKE_HEAD, OPEN_MOUTH, SMILE, HOLD_STILL
+   /* BLINK,*/ /*SHAKE_HEAD,*/ OPEN_MOUTH, SMILE, HOLD_STILL
 }
 
 enum class FaceStatus {

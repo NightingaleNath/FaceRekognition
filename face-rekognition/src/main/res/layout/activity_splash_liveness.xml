@@ -22,18 +22,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Face \nRecognition"
+        android:text="@string/face_nrekognition"
         android:textColor="#404040"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iv_face" />
 
-    <ImageView
+    <TextView
         android:id="@+id/iv_developby"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin_xsmall"
-        android:src="@drawable/developby_innocent"
+        android:gravity="center"
+        android:text="@string/developed"
+        android:textColor="#404040"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -13,10 +13,10 @@ object MNCIdentifier {
 
     var detectionMode = listOf(
         DetectionMode.HOLD_STILL,
-        /*DetectionMode.OPEN_MOUTH,*/
-        /*DetectionMode.BLINK,*/
-        /*DetectionMode.SHAKE_HEAD,*/
-        /*DetectionMode.SMILE*/
+        DetectionMode.OPEN_MOUTH,
+        DetectionMode.BLINK,
+        DetectionMode.SHAKE_HEAD,
+        DetectionMode.SMILE
     )
 
     @JvmStatic

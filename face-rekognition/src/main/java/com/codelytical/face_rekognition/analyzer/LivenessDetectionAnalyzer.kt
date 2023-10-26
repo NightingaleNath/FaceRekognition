@@ -77,7 +77,7 @@ class LivenessDetectionAnalyzer(
             rotationDegrees)
         when (currentDetectionMode()) {
             /*DetectionMode.BLINK,*/
-            DetectionMode.SMILE,
+            /*DetectionMode.SMILE,*/
             /*DetectionMode.SHAKE_HEAD,*/
             DetectionMode.HOLD_STILL -> {
                 classificationDetector.process(inputImage)
@@ -88,7 +88,7 @@ class LivenessDetectionAnalyzer(
                         image.close()
                     }
             }
-            DetectionMode.OPEN_MOUTH -> {
+            /*DetectionMode.OPEN_MOUTH -> {
                 countourDetector.process(inputImage)
                     .addOnSuccessListener { faces ->
                         handleFaces(faces)
@@ -96,7 +96,7 @@ class LivenessDetectionAnalyzer(
                     .addOnCompleteListener {
                         image.close()
                     }
-            }
+            }*/
             else -> {
                 image.close()
             }
@@ -126,8 +126,8 @@ class LivenessDetectionAnalyzer(
         when (detectionMode) {
             /*DetectionMode.BLINK -> detectBlink(face)*/
             /*DetectionMode.SHAKE_HEAD -> detectShakeHead(face)*/
-            DetectionMode.OPEN_MOUTH -> detectMouthOpen(face)
-            DetectionMode.SMILE -> detectSmile(face)
+            /*DetectionMode.OPEN_MOUTH -> detectMouthOpen(face)
+            DetectionMode.SMILE -> detectSmile(face)*/
             DetectionMode.HOLD_STILL -> detectHoldStill(face)
         }
     }
@@ -260,7 +260,7 @@ class LivenessDetectionAnalyzer(
 }
 
 enum class DetectionMode {
-   /* BLINK,*/ /*SHAKE_HEAD,*/ OPEN_MOUTH, SMILE, HOLD_STILL
+   /* BLINK,*/ /*SHAKE_HEAD,*/ /*OPEN_MOUTH, SMILE,*/ HOLD_STILL
 }
 
 enum class FaceStatus {

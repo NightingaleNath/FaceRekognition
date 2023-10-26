@@ -126,7 +126,7 @@ class LivenessDetectionActivity : BaseCameraActivity(), LivenessDetectionListene
                 this, cameraSelector, previewUseCase, analysisUseCase)
             // Attach the viewfinder's surface provider to preview use case
             previewUseCase.setSurfaceProvider(previewView.surfaceProvider)
-            startCountdownTimer()
+            // startCountdownTimer()
         } catch (exc: Exception) {
             Log.e(TAG, "Use case binding failed", exc)
         }
@@ -180,18 +180,18 @@ class LivenessDetectionActivity : BaseCameraActivity(), LivenessDetectionListene
                 tvInstruction.text = getString(R.string.liveness_please_blink)
                 speak(getString(R.string.liveness_please_blink))
             }*/
-            DetectionMode.OPEN_MOUTH -> {
+            /*DetectionMode.OPEN_MOUTH -> {
                 tvInstruction.text = getString(R.string.liveness_please_open_mouth)
                 speak(getString(R.string.liveness_please_open_mouth))
-            }
+            }*/
             /*DetectionMode.SHAKE_HEAD -> {
                 tvInstruction.text = getString(R.string.liveness_please_shake_head)
                 speak(getString(R.string.liveness_please_shake_head))
             }*/
-            DetectionMode.SMILE -> {
+            /*DetectionMode.SMILE -> {
                 tvInstruction.text = getString(R.string.liveness_please_smile)
                 speak(getString(R.string.liveness_please_smile))
-            }
+            }*/
         }
     }
 

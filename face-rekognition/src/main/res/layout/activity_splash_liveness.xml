@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/facial_background"
     tools:context=".SplashLivenessActivity">
 
     <ImageView
@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_medium"
         android:src="@drawable/face_ai"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,6 +24,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/face_nrekognition"
+        android:visibility="gone"
         android:textColor="#404040"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

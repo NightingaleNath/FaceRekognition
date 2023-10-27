@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/NightingaleNath/FaceRekognition.svg)](https://jitpack.io/#NightingaleNath/FaceRekognition)
+
 # FaceRekognition
  Face Recognition
 

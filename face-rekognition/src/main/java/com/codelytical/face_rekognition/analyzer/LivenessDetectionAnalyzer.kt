@@ -138,7 +138,7 @@ class LivenessDetectionAnalyzer(
                 startHoldStillTimemilis = System.currentTimeMillis()
             else{
                 startHoldStillTimemilis?.let {
-                    if((System.currentTimeMillis() - it) > 2000){
+                    if((System.currentTimeMillis() - it) > 500){
                         nextDetection()
                     }
                 }

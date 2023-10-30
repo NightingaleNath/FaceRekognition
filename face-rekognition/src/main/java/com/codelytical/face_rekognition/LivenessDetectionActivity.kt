@@ -60,8 +60,10 @@ class LivenessDetectionActivity : BaseCameraActivity(), LivenessDetectionListene
             finish()
         }
         tgbTextToSpeech = uiContainer.findViewById(R.id.tg_mute)
+        tgbTextToSpeech.isChecked = true
         tgbTextToSpeech.setOnCheckedChangeListener { _, isChecked ->
-            isMute = isChecked
+            isMute = true
+            Log.d(TAG, "tgbTextToSpeech: $isChecked")
             if (isMute)
                 textToSpeech.stop()
         }
@@ -110,7 +112,8 @@ class LivenessDetectionActivity : BaseCameraActivity(), LivenessDetectionListene
                 LivenessDetectionAnalyzer(
                     this,
                     MNCIdentifier.detectionMode,
-                    Rect(ivFace.left - offset*2, ivFace.top - offset, ivFace.right + offset*2, ivFace.bottom + offset),
+                    // Rect(ivFace.left - offset*2, ivFace.top - offset, ivFace.right + offset*2, ivFace.bottom + offset),
+                    Rect(ivFace.left - offset * 3, ivFace.top - offset * 2, ivFace.right + offset * 3, ivFace.bottom + offset * 2),
                     graphicOverlay,
                     false,
                     this)
